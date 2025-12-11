@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from .models import User
+from .models import BrokerRequest, User
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -53,3 +53,18 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'email', 'full_name', 'is_broker')
+
+
+class BrokerRequestSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
+
+    class Meta:
+        model = BrokerRequest
+        fields = (
+            'id',
+            'user',
+            'status',
+            'created_at',
+            'updated_at',
+        )
+        read_only_fields = fields
