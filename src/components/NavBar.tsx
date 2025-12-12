@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
         Escrow Platform
       </Link>
       <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-        {currentUser && !currentUser.is_broker && (
+        {currentUser?.is_broker === false && (
           <Link to="/become-broker" style={{ padding: '8px 12px', borderRadius: '6px', backgroundColor: '#111827', color: '#fff', textDecoration: 'none' }}>
             Become a broker
           </Link>

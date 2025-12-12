@@ -20,6 +20,6 @@ export interface RegisterPayload {
   name?: string;
 }
 
-export interface BecomeBrokerResponse {
-  user: User;
+export interface RequestBrokerResponse {
+  message?: string;
 }

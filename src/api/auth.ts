@@ -1,5 +1,5 @@
 import api from './client';
-import { AuthResponse, BecomeBrokerResponse, LoginPayload, RegisterPayload } from '../types/auth';
+import { AuthResponse, LoginPayload, RegisterPayload, RequestBrokerResponse } from '../types/auth';
 
 export const loginRequest = async (payload: LoginPayload): Promise<AuthResponse> => {
   const response = await api.post<AuthResponse>('/auth/login', payload);
@@ -15,7 +15,7 @@ export const logoutRequest = async (): Promise<void> => {
   await api.post('/auth/logout');
 };
 
-export const becomeBrokerRequest = async (): Promise<BecomeBrokerResponse> => {
-  const response = await api.post<BecomeBrokerResponse>('/auth/become-broker');
+export const becomeBrokerRequest = async (): Promise<RequestBrokerResponse> => {
+  const response = await api.post<RequestBrokerResponse>('/accounts/request-broker/');
   return response.data;
 };
