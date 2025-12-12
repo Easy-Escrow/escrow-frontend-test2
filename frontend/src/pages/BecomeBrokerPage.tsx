@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { becomeBrokerRequest } from '../api/auth';
-import { useAuth } from '../context/AuthContext';
+import { becomeBrokerRequest } from '@/api/auth';
+import { useAuth } from '@/context/AuthContext';
 
 const BecomeBrokerPage: React.FC = () => {
   const { currentUser, updateUser } = useAuth();

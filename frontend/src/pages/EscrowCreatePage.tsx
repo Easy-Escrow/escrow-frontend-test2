@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../api/client';
-import styles from './EscrowCreatePage.module.css';
+import api from '@/api/client';
+import styles from '@/pages/EscrowCreatePage.module.css';
 
 interface EscrowPayload {
   agreement_name: string;
