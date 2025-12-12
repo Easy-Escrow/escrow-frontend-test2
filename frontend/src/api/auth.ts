@@ -1,5 +1,5 @@
 import api from './client';
-import { AuthResponse, BecomeBrokerResponse, LoginPayload, RegisterPayload } from '../types/auth';
+import { AuthResponse, BecomeBrokerResponse, LoginPayload, RegisterPayload } from '@/types/auth';
 
 export const loginRequest = async (payload: LoginPayload): Promise<AuthResponse> => {
   const response = await api.post<AuthResponse>('/auth/login', payload);

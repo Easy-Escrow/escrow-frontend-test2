@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { loginRequest, logoutRequest } from '../api/auth';
-import { AuthResponse, LoginPayload, User } from '../types/auth';
+import { loginRequest, logoutRequest } from '@/api/auth';
+import { AuthResponse, LoginPayload, User } from '@/types/auth';
 
 interface AuthContextValue {
   token: string | null;

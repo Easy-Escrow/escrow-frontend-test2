@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
-import { registerRequest } from '../api/auth';
-import { useAuth } from '../context/AuthContext';
-import { RegisterPayload } from '../types/auth';
+import { registerRequest } from '@/api/auth';
+import { useAuth } from '@/context/AuthContext';
+import { RegisterPayload } from '@/types/auth';
 
 const RegisterPage: React.FC = () => {
   const [form, setForm] = useState<RegisterPayload>({ email: '', password: '', name: '' });
