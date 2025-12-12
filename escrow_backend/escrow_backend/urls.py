@@ -6,4 +6,5 @@ urlpatterns = [
     path('api/auth/', include('accounts.urls')),
     path('api/accounts/', include('accounts.broker_urls')),
     path('api/', include('escrows.urls')),
+    path('api/', include('kyc.urls')),
 ]
